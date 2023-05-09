@@ -153,5 +153,42 @@ namespace Sara.Clases
                 con.desconectar();
             }
         }
+
+        public decimal ObtenerPrecioDesdeBaseDeDatos()
+        {
+
+            string servidor = "localhost";
+            string bd = "sarita";
+            string usuario = "root";
+            string password = "1234";
+            string puerto = "3306";
+
+            string cadenaConexion = "server=" + servidor + ";" + "port=" + puerto + ";" + "user id=" + usuario
+               + ";" + "password=" + password + ";" + "database=" + bd + ";";
+
+            decimal precio = 0;
+            Conexion con = new Conexion();
+
+            using (MySqlConnection connection = new MySqlConnection(cadenaConexion))
+            {
+                string query = "SELECT pre_prod  FROM producto";
+                MySqlCommand command = new MySqlCommand(query, connection);
+
+                try
+                {
+                    connection.Open();
+                    precio = Convert.ToDecimal(command.ExecuteScalar());
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error de registro");
+                }
+
+
+                return precio;
+            }
+                
+}
+
     }
 }

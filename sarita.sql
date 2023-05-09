@@ -1,8 +1,6 @@
 create database SARITA;
 USE SARITA;
 
-
-
 create table producto( 
 id_prod int primary key  auto_increment,-- Identificador del producto
 nom_prod varchar(40) unique not null,-- Nombre del producto 
@@ -31,8 +29,8 @@ foreign key(prod)references producto(id_prod) on update cascade on delete cascad
 
 create table cantidad_pedido(
 id_cp int primary key auto_increment,
-pedido_cp int  unique not null,
-producto_cp int unique not null,
+pedido_cp int   not null,
+producto_cp int not null,
 cantidad int not null,
 coste double not null,
 foreign key(pedido_cp)references pedido(id_ped) on update cascade on delete cascade,
