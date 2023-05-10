@@ -190,5 +190,70 @@ namespace Sara.Clases
                 
 }
 
+        public List<Dictionary<string, object>> ObtenerTodo() {
+            string servidor = "localhost";
+            string bd = "sarita";
+            string usuario = "root";
+            string password = "1234";
+            string puerto = "3306";
+
+            string cadenaConexion = "server=" + servidor + ";" + "port=" + puerto + ";" + "user id=" + usuario
+               + ";" + "password=" + password + ";" + "database=" + bd + ";";
+
+            using (MySqlConnection connection = new MySqlConnection(cadenaConexion))
+            {
+                connection.Open();
+                string sqlQuery = "SELECT * FROM producto";
+                MySqlCommand command = new MySqlCommand(sqlQuery, connection);
+                List<Dictionary<string, object>> tabla = new List<Dictionary<string, object>>();
+
+                // Ejecutar el comando y obtener un lector de datos (DataReader)
+                using (MySqlDataReader reader = command.ExecuteReader())
+                {
+                    // Verificar si hay filas en el resultado
+                    if (reader.HasRows)
+                    {
+                        // Iterar sobre cada fila de resultados
+                        while (reader.Read())
+                        {
+                            // Crear un diccionario para almacenar los datos de la fila actual
+                            Dictionary<string, object> fila = new Dictionary<string, object>();
+
+                            // Obtener el número de columnas en la fila
+                            int columnCount = reader.FieldCount;
+
+                            // Iterar sobre cada columna y agregarla al diccionario
+                            for (int i = 0; i < columnCount; i++)
+                            {
+                                string columnName = reader.GetName(i);
+                                object columnValue = reader.GetValue(i);
+                                fila.Add(columnName, columnValue);
+                            }
+
+                            // Agregar el diccionario de la fila a la lista
+                            tabla.Add(fila);
+                        }
+                    }
+                }
+
+                // Utilizar la tabla con los datos completos
+                foreach (Dictionary<string, object> fila in tabla)
+                {
+                    foreach (KeyValuePair<string, object> kvp in fila)
+                    {
+                        string columnName = kvp.Key;
+                        object columnValue = kvp.Value;
+                        // Realizar las operaciones necesarias con los datos
+                    }
+                }
+
+                // Cerrar la conexión
+                connection.Close();
+                return tabla;
+            }
+
+
+        }
+
     }
 }

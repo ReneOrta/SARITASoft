@@ -13,11 +13,46 @@ namespace Sara
 {
     public partial class ad_ped : Form
     {
+        List<Dictionary<string, object>> datos = new List<Dictionary<string, object>>();
         public ad_ped()
         {
             InitializeComponent();
-            Clases.CPedido combobox = new Clases.CPedido();
-            combobox.ComboBoxPedidos(comboBox1);
+            Clases.CPedido ped = new Clases.CPedido();
+            ped.ComboBoxPedidos(comboBox1);
+            datos = ped.ObtenerTodo();
+            List<string> columnNames = new List<string>();
+            if (datos.Count > 0)
+            {
+                foreach (string columnName in datos[0].Keys)
+                {
+                    columnNames.Add(columnName);
+                }
+            }
+
+            // Imprimir los encabezados de las columnas
+            foreach (string columnName in columnNames)
+            {
+                Console.Write("{0,-15}", columnName);
+            }
+            Console.WriteLine();
+
+            // Imprimir los datos de las filas
+            foreach (Dictionary<string, object> fila in datos)
+            {
+                foreach (string columnName in columnNames)
+                {
+                    object columnValue;
+                    if (fila.TryGetValue(columnName, out columnValue))
+                    {
+                        Console.Write("{0,-15}", columnValue);
+                    }
+                    else
+                    {
+                        Console.Write("{0,-15}", string.Empty);
+                    }
+                }
+                Console.WriteLine();
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -54,6 +89,9 @@ namespace Sara
 
         private void button1_Click(object sender, EventArgs e)
         {
+            
+
+            
 
             string total = textBox1.Text;
             int id_ped = (int)numericUpDown1.Value;
@@ -62,12 +100,47 @@ namespace Sara
             // Obtener los datos del DataGridView
             List<int> cantidades = new List<int>();
             List<decimal> costes = new List<decimal>();
+            List<string> nombres = new List<string>();
+            List<int> ids = new List<int>();
 
             foreach (DataGridViewRow row in dataGridView1.Rows)
-            {  
+            {
+                if (row.Cells["prod"].Value!=null){
+                    nombres.Add((string)row.Cells["prod"].Value);
+                }
+
+                if (row.Cells["cant"].Value != null)
+                {
                     cantidades.Add((int)row.Cells["cant"].Value);
+                }
+                if (row.Cells["price"].Value != null)
+                {
                     costes.Add((decimal)row.Cells["price"].Value);
+                }
+                    
             }
+
+            foreach (string nombreBuscado in nombres)
+            {
+                int idProducto = -1; // Valor por defecto si no se encuentra el nombre
+
+                for (int i = 0; i < nombres.Count; i++)
+                {
+                    if (nombres[i].ToString() == nombreBuscado)
+                    {
+                        idProducto = Convert.ToInt32(datos[i]["id_prod"]);
+                        
+                        break;
+                    }
+
+                }
+                ids.Add(idProducto);
+            }
+
+            
+            foreach (int id in ids) {
+                Console.Write("{0,-15}","ID:"+id );
+            
 
             string servidor = "localhost";
             string bd = "sarita";
@@ -94,25 +167,27 @@ namespace Sara
 
                     // Obtener el último ID insertado en la tabla "Pedido"
                     long pedidoId = commandPedido.LastInsertedId;
+                    
 
                     // Guardar en la tabla "cantidad_pedido"
-                    string queryCantidadPedido = "INSERT INTO cantidad_pedido (cantidad, coste, pedido_CP) VALUES (@cantidad, @coste, @pedidoCP)";
+                    string queryCantidadPedido = "INSERT INTO cantidad_pedido (pedido_cp,producto_cp,cantidad,coste) VALUES (@pedidoCP,@productoCP,@cantidad,@coste)";
                     MySqlCommand commandCantidadPedido = new MySqlCommand(queryCantidadPedido, connection);
 
                     for (int i = 0; i < cantidades.Count; i++)
                     {
                         commandCantidadPedido.Parameters.Clear();
-                        commandCantidadPedido.Parameters.AddWithValue("@cantidad", cantidades[i]);
-                        commandCantidadPedido.Parameters.AddWithValue("@coste", costes[i]);
                         commandCantidadPedido.Parameters.AddWithValue("@pedidoCP", pedidoId);
+                        commandCantidadPedido.Parameters.AddWithValue("@productoCP",ids[i]);
+                        commandCantidadPedido.Parameters.AddWithValue("@cantidad", cantidades[i]);
+                        commandCantidadPedido.Parameters.AddWithValue("@coste", costes[i]); 
                         commandCantidadPedido.ExecuteNonQuery();
                     }
 
-                    // Mostrar un mensaje de éxito o realizar otras acciones necesarias
+                    MessageBox.Show("Viva Jalomo");
                 }
                 catch (Exception ex)
                 {
-                    // Manejar la excepción, mostrar un mensaje de error, etc.
+                    MessageBox.Show("Que chingue a su madre Castran"+ex);
                 }
             }
         }

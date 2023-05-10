@@ -29,8 +29,8 @@ foreign key(prod)references producto(id_prod) on update cascade on delete cascad
 
 create table cantidad_pedido(
 id_cp int primary key auto_increment,
-pedido_cp int   not null,
-producto_cp int not null,
+pedido_cp int  not null,-- id del pedido
+producto_cp int not null,-- id del producto
 cantidad int not null,
 coste double not null,
 foreign key(pedido_cp)references pedido(id_ped) on update cascade on delete cascade,
