@@ -26,7 +26,7 @@ namespace Sara
             Clases.CPedido con = new Clases.CPedido();
 
             conecta.conectar();
-            
+
             // Obtener el valor del NumericUpDown
             decimal cantidad = numericUpDown2.Value;
 
@@ -54,19 +54,19 @@ namespace Sara
 
         private void button1_Click(object sender, EventArgs e)
         {
+
             string total = textBox1.Text;
-            int id = (int)numericUpDown2.Value;
+            int id_ped = (int)numericUpDown1.Value;
+            DateTime fecha_pedido = fecha_cad.Value;
 
             // Obtener los datos del DataGridView
-            List<string> productos = new List<string>();
             List<int> cantidades = new List<int>();
             List<decimal> costes = new List<decimal>();
 
             foreach (DataGridViewRow row in dataGridView1.Rows)
-            {
-                productos.Add(row.Cells["prod"].Value.ToString());
-                cantidades.Add((int)row.Cells["cant"].Value);
-                costes.Add((decimal)row.Cells["price"].Value);
+            {  
+                    cantidades.Add((int)row.Cells["cant"].Value);
+                    costes.Add((decimal)row.Cells["price"].Value);
             }
 
             string servidor = "localhost";
@@ -85,18 +85,18 @@ namespace Sara
                     connection.Open();
 
                     // Guardar en la tabla "Pedido"
-                    string queryPedido = "INSERT INTO pedido (id_ped,total, fecha_pedido) VALUES (@idPed,@total, @fechaPedido)";
+                    string queryPedido = "INSERT INTO pedido (id_ped,total,fecha_pedido ) VALUES (@idPed,@total, @fechaPedido)";
                     MySqlCommand commandPedido = new MySqlCommand(queryPedido, connection);
                     commandPedido.Parameters.AddWithValue("@total", total);
-                    commandPedido.Parameters.AddWithValue("@fechaPedido", fecha_cad);
-                    commandPedido.Parameters.AddWithValue("@idPed", numericUpDown1);
+                    commandPedido.Parameters.AddWithValue("@fechaPedido", fecha_pedido);
+                    commandPedido.Parameters.AddWithValue("@idPed", id_ped);
                     commandPedido.ExecuteNonQuery();
 
                     // Obtener el último ID insertado en la tabla "Pedido"
                     long pedidoId = commandPedido.LastInsertedId;
 
                     // Guardar en la tabla "cantidad_pedido"
-                    string queryCantidadPedido = "INSERT INTO cantidad_pedido (cantidad, coste, pedido_cp) VALUES (@cantidad, @coste, @pedidocp)";
+                    string queryCantidadPedido = "INSERT INTO cantidad_pedido (cantidad, coste, pedido_CP) VALUES (@cantidad, @coste, @pedidoCP)";
                     MySqlCommand commandCantidadPedido = new MySqlCommand(queryCantidadPedido, connection);
 
                     for (int i = 0; i < cantidades.Count; i++)
@@ -108,16 +108,16 @@ namespace Sara
                         commandCantidadPedido.ExecuteNonQuery();
                     }
 
-                    MessageBox.Show("Jalo");
+                    // Mostrar un mensaje de éxito o realizar otras acciones necesarias
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("No Jalo");
+                    // Manejar la excepción, mostrar un mensaje de error, etc.
                 }
             }
         }
-
-
-        }
     }
 }
+    
+    
+

@@ -152,9 +152,19 @@ namespace Sara
             this.numericUpDown2.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown2.InterceptArrowKeys = false;
             this.numericUpDown2.Location = new System.Drawing.Point(359, 3);
+            this.numericUpDown2.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.numericUpDown2.Name = "numericUpDown2";
             this.numericUpDown2.Size = new System.Drawing.Size(71, 36);
             this.numericUpDown2.TabIndex = 1;
+            this.numericUpDown2.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // button2
             // 
@@ -233,7 +243,7 @@ namespace Sara
             // 
             // dataGridView1
             // 
-            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToOrderColumns = true;
             this.dataGridView1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -241,10 +251,8 @@ namespace Sara
             this.prod,
             this.cant,
             this.price});
-            this.dataGridView1.Enabled = false;
             this.dataGridView1.Location = new System.Drawing.Point(315, 50);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(813, 150);
@@ -314,12 +322,14 @@ namespace Sara
             // textBox1
             // 
             this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBox1.Enabled = false;
             this.textBox1.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.ForeColor = System.Drawing.Color.Black;
             this.textBox1.Location = new System.Drawing.Point(605, 41);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(232, 44);
             this.textBox1.TabIndex = 1;
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // tableLayoutPanel7
             // 
@@ -344,10 +354,11 @@ namespace Sara
             this.fecha_cad.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fecha_cad.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.fecha_cad.Location = new System.Drawing.Point(597, 42);
+            this.fecha_cad.MinDate = new System.DateTime(2023, 1, 1, 0, 0, 0, 0);
             this.fecha_cad.Name = "fecha_cad";
             this.fecha_cad.Size = new System.Drawing.Size(248, 53);
             this.fecha_cad.TabIndex = 8;
-            this.fecha_cad.Value = new System.DateTime(2023, 5, 3, 1, 26, 55, 0);
+            this.fecha_cad.Value = new System.DateTime(2023, 5, 9, 0, 0, 0, 0);
             // 
             // label4
             // 
@@ -372,7 +383,7 @@ namespace Sara
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(1443, 89);
             this.label1.TabIndex = 5;
-            this.label1.Text = "REGISTRAR PRODUCTO";
+            this.label1.Text = "AÑADIR PEDIDO";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // ad_ped

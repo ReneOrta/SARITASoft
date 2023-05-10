@@ -64,7 +64,7 @@ namespace Sara
             this.panel2.Location = new System.Drawing.Point(4, 4);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(255, 791);
+            this.panel2.Size = new System.Drawing.Size(235, 791);
             this.panel2.TabIndex = 1;
             // 
             // panel5
@@ -191,7 +191,7 @@ namespace Sara
             // 
             this.pictureBox1.BackgroundImage = global::Sara.Properties.Resources.Logo_Harina_1;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(70, 46);
+            this.pictureBox1.Location = new System.Drawing.Point(37, 45);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(243, 211);
             this.pictureBox1.TabIndex = 0;
@@ -201,8 +201,8 @@ namespace Sara
             // 
             this.tableLayoutPanel1.BackColor = System.Drawing.Color.Peru;
             this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18.23204F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 81.76796F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.78177F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 83.21823F));
             this.tableLayoutPanel1.Controls.Add(this.panel2, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.panel_vista, 1, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -218,9 +218,9 @@ namespace Sara
             // 
             this.panel_vista.BackColor = System.Drawing.Color.SaddleBrown;
             this.panel_vista.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel_vista.Location = new System.Drawing.Point(266, 3);
+            this.panel_vista.Location = new System.Drawing.Point(246, 3);
             this.panel_vista.Name = "panel_vista";
-            this.panel_vista.Size = new System.Drawing.Size(1179, 793);
+            this.panel_vista.Size = new System.Drawing.Size(1199, 793);
             this.panel_vista.TabIndex = 2;
             // 
             // Administrador
