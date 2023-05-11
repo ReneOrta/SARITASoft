@@ -293,5 +293,11 @@
   <ItemGroup>
     <None Include="Resources\Logo_Harina.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icono Reporte.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icono Reporte removebg.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

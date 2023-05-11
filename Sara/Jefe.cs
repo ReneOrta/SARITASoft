@@ -191,5 +191,100 @@ namespace Sara
         {
             AbrirFormInPanel(new JefeGenerarReporteIngresos());
         }
+
+        private void panel1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_MouseEnter_1(object sender, EventArgs e)
+        {
+            panel1.BackColor = Color.Peru;
+        }
+
+        private void panel2_MouseEnter_1(object sender, EventArgs e)
+        {
+            panel2.BackColor = Color.Peru;
+        }
+
+        private void panel3_MouseEnter_1(object sender, EventArgs e)
+        {
+            panel3.BackColor = Color.Peru;
+        }
+
+        private void label2_MouseEnter_1(object sender, EventArgs e)
+        {
+            panel1.BackColor = Color.Peru;
+        }
+
+        private void label3_MouseEnter_1(object sender, EventArgs e)
+        {
+            panel2.BackColor = Color.Peru;
+        }
+
+        private void label4_MouseEnter_1(object sender, EventArgs e)
+        {
+            panel3.BackColor = Color.Peru;
+        }
+
+        private void pictureBox2_MouseEnter(object sender, EventArgs e)
+        {
+            panel1.BackColor = Color.Peru;
+        }
+
+        private void pictureBox3_MouseEnter(object sender, EventArgs e)
+        {
+            panel2.BackColor = Color.Peru;
+        }
+
+        private void pictureBox4_MouseEnter(object sender, EventArgs e)
+        {
+            panel3.BackColor = Color.Peru;
+        }
+
+        private void panel1_MouseLeave_1(object sender, EventArgs e)
+        {
+            panel1.BackColor = Color.SaddleBrown;
+        }
+
+        private void label2_MouseLeave_1(object sender, EventArgs e)
+        {
+            panel1.BackColor = Color.SaddleBrown;
+        }
+
+        private void pictureBox2_MouseLeave(object sender, EventArgs e)
+        {
+            panel1.BackColor = Color.SaddleBrown;
+        }
+
+        private void panel2_MouseLeave_1(object sender, EventArgs e)
+        {
+            panel2.BackColor = Color.SaddleBrown;
+        }
+
+        private void label3_MouseLeave_1(object sender, EventArgs e)
+        {
+            panel2.BackColor = Color.SaddleBrown;
+        }
+
+        private void pictureBox3_MouseLeave(object sender, EventArgs e)
+        {
+            panel2.BackColor = Color.SaddleBrown;
+        }
+
+        private void panel3_MouseLeave_1(object sender, EventArgs e)
+        {
+            panel3.BackColor = Color.SaddleBrown;
+        }
+
+        private void label4_MouseLeave_1(object sender, EventArgs e)
+        {
+            panel3.BackColor = Color.SaddleBrown;
+        }
+
+        private void pictureBox4_MouseLeave(object sender, EventArgs e)
+        {
+            panel3.BackColor = Color.SaddleBrown;
+        }
     }
 }
