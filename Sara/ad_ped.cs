@@ -89,10 +89,6 @@ namespace Sara
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
-
-            
-
             string total = textBox1.Text;
             int id_ped = (int)numericUpDown1.Value;
             DateTime fecha_pedido = fecha_cad.Value;
@@ -105,7 +101,8 @@ namespace Sara
 
             foreach (DataGridViewRow row in dataGridView1.Rows)
             {
-                if (row.Cells["prod"].Value!=null){
+                if (row.Cells["prod"].Value != null)
+                {
                     nombres.Add((string)row.Cells["prod"].Value);
                 }
 
@@ -117,7 +114,7 @@ namespace Sara
                 {
                     costes.Add((decimal)row.Cells["price"].Value);
                 }
-                    
+
             }
 
             foreach (string nombreBuscado in nombres)
@@ -129,7 +126,7 @@ namespace Sara
                     if (nombres[i].ToString() == nombreBuscado)
                     {
                         idProducto = Convert.ToInt32(datos[i]["id_prod"]);
-                        
+
                         break;
                     }
 
@@ -137,57 +134,59 @@ namespace Sara
                 ids.Add(idProducto);
             }
 
-            
-            foreach (int id in ids) {
-                Console.Write("{0,-15}","ID:"+id );
-            
 
-            string servidor = "localhost";
-            string bd = "sarita";
-            string usuario = "root";
-            string password = "1234";
-            string puerto = "3306";
-
-            string cadenaConexion = "server=" + servidor + ";" + "port=" + puerto + ";" + "user id=" + usuario
-               + ";" + "password=" + password + ";" + "database=" + bd + ";";
-
-            using (MySqlConnection connection = new MySqlConnection(cadenaConexion))
+            foreach (int id in ids)
             {
-                try
+                Console.Write("{0,-15}", "ID:" + id);
+
+
+                string servidor = "localhost";
+                string bd = "sarita";
+                string usuario = "root";
+                string password = "1234";
+                string puerto = "3306";
+
+                string cadenaConexion = "server=" + servidor + ";" + "port=" + puerto + ";" + "user id=" + usuario
+                   + ";" + "password=" + password + ";" + "database=" + bd + ";";
+
+                using (MySqlConnection connection = new MySqlConnection(cadenaConexion))
                 {
-                    connection.Open();
-
-                    // Guardar en la tabla "Pedido"
-                    string queryPedido = "INSERT INTO pedido (id_ped,total,fecha_pedido ) VALUES (@idPed,@total, @fechaPedido)";
-                    MySqlCommand commandPedido = new MySqlCommand(queryPedido, connection);
-                    commandPedido.Parameters.AddWithValue("@total", total);
-                    commandPedido.Parameters.AddWithValue("@fechaPedido", fecha_pedido);
-                    commandPedido.Parameters.AddWithValue("@idPed", id_ped);
-                    commandPedido.ExecuteNonQuery();
-
-                    // Obtener el último ID insertado en la tabla "Pedido"
-                    long pedidoId = commandPedido.LastInsertedId;
-                    
-
-                    // Guardar en la tabla "cantidad_pedido"
-                    string queryCantidadPedido = "INSERT INTO cantidad_pedido (pedido_cp,producto_cp,cantidad,coste) VALUES (@pedidoCP,@productoCP,@cantidad,@coste)";
-                    MySqlCommand commandCantidadPedido = new MySqlCommand(queryCantidadPedido, connection);
-
-                    for (int i = 0; i < cantidades.Count; i++)
+                    try
                     {
-                        commandCantidadPedido.Parameters.Clear();
-                        commandCantidadPedido.Parameters.AddWithValue("@pedidoCP", pedidoId);
-                        commandCantidadPedido.Parameters.AddWithValue("@productoCP",ids[i]);
-                        commandCantidadPedido.Parameters.AddWithValue("@cantidad", cantidades[i]);
-                        commandCantidadPedido.Parameters.AddWithValue("@coste", costes[i]); 
-                        commandCantidadPedido.ExecuteNonQuery();
-                    }
+                        connection.Open();
 
-                    MessageBox.Show("Viva Jalomo");
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Que chingue a su madre Castran"+ex);
+                        // Guardar en la tabla "Pedido"
+                        string queryPedido = "INSERT INTO pedido (id_ped,total,fecha_pedido ) VALUES (@idPed,@total, @fechaPedido)";
+                        MySqlCommand commandPedido = new MySqlCommand(queryPedido, connection);
+                        commandPedido.Parameters.AddWithValue("@total", total);
+                        commandPedido.Parameters.AddWithValue("@fechaPedido", fecha_pedido);
+                        commandPedido.Parameters.AddWithValue("@idPed", id_ped);
+                        commandPedido.ExecuteNonQuery();
+
+                        // Obtener el último ID insertado en la tabla "Pedido"
+                        long pedidoId = commandPedido.LastInsertedId;
+
+
+                        // Guardar en la tabla "cantidad_pedido"
+                        string queryCantidadPedido = "INSERT INTO cantidad_pedido (pedido_cp,producto_cp,cantidad,coste) VALUES (@pedidoCP,@productoCP,@cantidad,@coste)";
+                        MySqlCommand commandCantidadPedido = new MySqlCommand(queryCantidadPedido, connection);
+
+                        for (int i = 0; i < cantidades.Count; i++)
+                        {
+                            commandCantidadPedido.Parameters.Clear();
+                            commandCantidadPedido.Parameters.AddWithValue("@pedidoCP", pedidoId);
+                            commandCantidadPedido.Parameters.AddWithValue("@productoCP", ids[i]);
+                            commandCantidadPedido.Parameters.AddWithValue("@cantidad", cantidades[i]);
+                            commandCantidadPedido.Parameters.AddWithValue("@coste", costes[i]);
+                            commandCantidadPedido.ExecuteNonQuery();
+                        }
+
+                        MessageBox.Show("Pedido ingresado exitosamente");
+                    }
+                    catch (Exception ex)
+                    {
+                      MessageBox.Show("Error al ingresar pedido");
+                    }
                 }
             }
         }
