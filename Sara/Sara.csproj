@@ -126,6 +126,30 @@
     <Compile Include="del_producto.Designer.cs">
       <DependentUpon>del_producto.cs</DependentUpon>
     </Compile>
+    <Compile Include="Jefe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Jefe.Designer.cs">
+      <DependentUpon>Jefe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JefeGenerarReporte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JefeGenerarReporte.Designer.cs">
+      <DependentUpon>JefeGenerarReporte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JefeGenerarReporteIngresos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JefeGenerarReporteIngresos.Designer.cs">
+      <DependentUpon>JefeGenerarReporteIngresos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JefeInicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JefeInicio.Designer.cs">
+      <DependentUpon>JefeInicio.cs</DependentUpon>
+    </Compile>
     <Compile Include="login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -152,6 +176,24 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RIxAnio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RIxAnio.Designer.cs">
+      <DependentUpon>RIxAnio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RIxDia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RIxDia.Designer.cs">
+      <DependentUpon>RIxDia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RIxMes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RIxMes.Designer.cs">
+      <DependentUpon>RIxMes.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AdminInicio.resx">
       <DependentUpon>AdminInicio.cs</DependentUpon>
     </EmbeddedResource>
@@ -169,6 +211,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="del_producto.resx">
       <DependentUpon>del_producto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Jefe.resx">
+      <DependentUpon>Jefe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JefeGenerarReporte.resx">
+      <DependentUpon>JefeGenerarReporte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JefeGenerarReporteIngresos.resx">
+      <DependentUpon>JefeGenerarReporteIngresos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JefeInicio.resx">
+      <DependentUpon>JefeInicio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.cs</DependentUpon>
@@ -192,6 +246,15 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="RIxAnio.resx">
+      <DependentUpon>RIxAnio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RIxDia.resx">
+      <DependentUpon>RIxDia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RIxMes.resx">
+      <DependentUpon>RIxMes.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
