@@ -29,5 +29,14 @@ namespace Sara
             Clases.CIngreso ingresos = new Clases.CIngreso();
             ingresos.mostrarIngresosMes(dataGridView1, mes);
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            object m = cbMes.SelectedItem;
+            String mes = cbMes.GetItemText(m);
+
+            Clases.CIngreso ingresos = new Clases.CIngreso();
+            ingresos.mostrarIngresosMes(dataGridView1, mes);
+        }
     }
 }

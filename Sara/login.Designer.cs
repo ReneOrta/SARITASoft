@@ -94,11 +94,11 @@ namespace Sara
             // 
             // textBox1
             // 
-            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(39, 343);
             this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(223, 37);
+            this.textBox1.Size = new System.Drawing.Size(223, 36);
             this.textBox1.TabIndex = 16;
             this.textBox1.UseSystemPasswordChar = true;
             // 
@@ -129,11 +129,11 @@ namespace Sara
             // Usuario
             // 
             this.Usuario.BackColor = System.Drawing.SystemColors.Window;
-            this.Usuario.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Usuario.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Usuario.Location = new System.Drawing.Point(39, 237);
             this.Usuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Usuario.Name = "Usuario";
-            this.Usuario.Size = new System.Drawing.Size(223, 37);
+            this.Usuario.Size = new System.Drawing.Size(223, 36);
             this.Usuario.TabIndex = 17;
             // 
             // pictureBox2

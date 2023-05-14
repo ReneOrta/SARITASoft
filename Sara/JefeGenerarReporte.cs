@@ -21,5 +21,11 @@ namespace Sara
             Clases.CProducto producto = new Clases.CProducto();
             producto.mostrarProductos(dataGridView1);
         }
+
+        private void grButton_Click_1(object sender, EventArgs e)
+        {
+            Clases.CProducto producto = new Clases.CProducto();
+            producto.mostrarProductos(dataGridView1);
+        }
     }
 }

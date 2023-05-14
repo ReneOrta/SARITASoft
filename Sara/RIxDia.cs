@@ -43,5 +43,15 @@ namespace Sara
                 e.Handled = true;
             }
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            object d = cbDia.SelectedItem;
+            String dia = cbDia.GetItemText(d);
+            object m = cbMes.SelectedItem;
+            String mes = cbMes.GetItemText(m);
+            Clases.CIngreso ingresos = new Clases.CIngreso();
+            ingresos.mostrarIngresosDia(dataGridView1, tbAnio, mes, dia);
+        }
     }
 }

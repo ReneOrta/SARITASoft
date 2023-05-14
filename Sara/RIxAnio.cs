@@ -45,5 +45,11 @@ namespace Sara
         {
 
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            Clases.CIngreso ingresos = new Clases.CIngreso();
+            ingresos.mostrarIngresosAnio(dataGridView1, tbAnio);
+        }
     }
 }

@@ -130,5 +130,40 @@ namespace Sara
         {
 
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel1_Click(object sender, EventArgs e)
+        {
+            AbrirFormInPanel3(new Reportes());
+        }
+
+        private void panel1_MouseLeave(object sender, EventArgs e)
+        {
+            panel1.BackColor = Color.SaddleBrown;
+        }
+
+        private void panel1_MouseEnter(object sender, EventArgs e)
+        {
+            panel1.BackColor = Color.Peru;
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            AbrirFormInPanel3(new Reportes());
+        }
+
+        private void label1_MouseEnter(object sender, EventArgs e)
+        {
+            panel1.BackColor = Color.Peru;
+        }
+
+        private void label1_MouseLeave(object sender, EventArgs e)
+        {
+            panel1.BackColor = Color.SaddleBrown;
+        }
     }
 }

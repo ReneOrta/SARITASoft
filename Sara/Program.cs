@@ -16,7 +16,7 @@ namespace Sara
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Jefe());
+            Application.Run(new login());
         }
     }
 }
