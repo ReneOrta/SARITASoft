@@ -70,7 +70,7 @@ namespace Sara
             this.panel2.Location = new System.Drawing.Point(4, 4);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(235, 873);
+            this.panel2.Size = new System.Drawing.Size(262, 873);
             this.panel2.TabIndex = 1;
             // 
             // panel1
@@ -81,7 +81,7 @@ namespace Sara
             this.panel1.Location = new System.Drawing.Point(1, 702);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(336, 113);
+            this.panel1.Size = new System.Drawing.Size(382, 113);
             this.panel1.TabIndex = 7;
             this.panel1.Click += new System.EventHandler(this.panel1_Click);
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
@@ -122,7 +122,7 @@ namespace Sara
             this.panel5.Location = new System.Drawing.Point(1, 581);
             this.panel5.Margin = new System.Windows.Forms.Padding(4);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(336, 113);
+            this.panel5.Size = new System.Drawing.Size(382, 113);
             this.panel5.TabIndex = 6;
             this.panel5.Click += new System.EventHandler(this.panel5_Click);
             this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
@@ -148,22 +148,22 @@ namespace Sara
             this.label4.Location = new System.Drawing.Point(162, 16);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(150, 80);
+            this.label4.Size = new System.Drawing.Size(204, 80);
             this.label4.TabIndex = 1;
-            this.label4.Text = "Ingresar\r\nPedido";
+            this.label4.Text = "Control\r\nde pedidos";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label4.Click += new System.EventHandler(this.label4_Click);
             this.label4.MouseEnter += new System.EventHandler(this.label4_MouseEnter);
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.pictureBox3);
             this.panel4.Controls.Add(this.label3);
+            this.panel4.Controls.Add(this.pictureBox3);
             this.panel4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.panel4.Location = new System.Drawing.Point(1, 461);
             this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(336, 113);
+            this.panel4.Size = new System.Drawing.Size(382, 113);
             this.panel4.TabIndex = 5;
             this.panel4.Click += new System.EventHandler(this.panel4_Click);
             this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
@@ -185,12 +185,12 @@ namespace Sara
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Khaki;
-            this.label3.Location = new System.Drawing.Point(162, 18);
+            this.label3.Location = new System.Drawing.Point(129, 17);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(165, 80);
+            this.label3.Size = new System.Drawing.Size(237, 80);
             this.label3.TabIndex = 1;
-            this.label3.Text = "Ingresar\r\nProducto";
+            this.label3.Text = "Gestion \r\nde productos";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label3.Click += new System.EventHandler(this.label3_Click);
             this.label3.MouseEnter += new System.EventHandler(this.label3_MouseEnter);
@@ -204,7 +204,7 @@ namespace Sara
             this.panel3.Location = new System.Drawing.Point(1, 340);
             this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(336, 113);
+            this.panel3.Size = new System.Drawing.Size(382, 113);
             this.panel3.TabIndex = 4;
             this.panel3.Click += new System.EventHandler(this.panel3_Click);
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
@@ -240,7 +240,7 @@ namespace Sara
             // 
             this.pictureBox1.BackgroundImage = global::Sara.Properties.Resources.Logo_Harina_1;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(37, 45);
+            this.pictureBox1.Location = new System.Drawing.Point(70, 48);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(243, 211);
             this.pictureBox1.TabIndex = 0;
@@ -250,8 +250,8 @@ namespace Sara
             // 
             this.tableLayoutPanel1.BackColor = System.Drawing.Color.Peru;
             this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.78177F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 83.21823F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18.71547F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 81.28453F));
             this.tableLayoutPanel1.Controls.Add(this.panel2, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.panel_vista, 1, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -267,9 +267,9 @@ namespace Sara
             // 
             this.panel_vista.BackColor = System.Drawing.Color.SaddleBrown;
             this.panel_vista.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel_vista.Location = new System.Drawing.Point(246, 3);
+            this.panel_vista.Location = new System.Drawing.Point(273, 3);
             this.panel_vista.Name = "panel_vista";
-            this.panel_vista.Size = new System.Drawing.Size(1199, 875);
+            this.panel_vista.Size = new System.Drawing.Size(1172, 875);
             this.panel_vista.TabIndex = 2;
             // 
             // Administrador
