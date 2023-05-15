@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.grButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -40,13 +42,30 @@
             // 
             // dataGridView1
             // 
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Peru;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Brown;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.Peru;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Brown;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(4, 250);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.GridColor = System.Drawing.Color.Brown;
+            this.dataGridView1.Location = new System.Drawing.Point(3, 203);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(1533, 565);
+            this.dataGridView1.Size = new System.Drawing.Size(1150, 459);
             this.dataGridView1.TabIndex = 1;
             // 
             // grButton
@@ -56,10 +75,9 @@
             this.grButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grButton.Font = new System.Drawing.Font("Century Gothic", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grButton.ForeColor = System.Drawing.Color.Khaki;
-            this.grButton.Location = new System.Drawing.Point(4, 127);
-            this.grButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grButton.Location = new System.Drawing.Point(3, 103);
             this.grButton.Name = "grButton";
-            this.grButton.Size = new System.Drawing.Size(1533, 115);
+            this.grButton.Size = new System.Drawing.Size(1150, 94);
             this.grButton.TabIndex = 3;
             this.grButton.Text = "GENERAR REPORTE";
             this.grButton.UseVisualStyleBackColor = false;
@@ -74,22 +92,20 @@
             this.tableLayoutPanel1.Controls.Add(this.grButton, 0, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 3;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 123F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 123F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 100F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1541, 818);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1156, 665);
             this.tableLayoutPanel1.TabIndex = 4;
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(4, 4);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1385, 115);
+            this.panel1.Size = new System.Drawing.Size(1039, 93);
             this.panel1.TabIndex = 5;
             // 
             // label1
@@ -97,22 +113,20 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Khaki;
-            this.label1.Location = new System.Drawing.Point(340, 7);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(255, 6);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(974, 93);
+            this.label1.Size = new System.Drawing.Size(781, 77);
             this.label1.TabIndex = 4;
             this.label1.Text = "REPORTE DE PRODUCTOS";
             // 
             // JefeGenerarReporte
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Peru;
-            this.ClientSize = new System.Drawing.Size(1541, 818);
+            this.ClientSize = new System.Drawing.Size(1156, 665);
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "JefeGenerarReporte";
             this.Text = "JefeGenerarReporte";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
