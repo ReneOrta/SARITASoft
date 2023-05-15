@@ -92,5 +92,40 @@ namespace Sara
                 e.Handled = true;
             }
         }
+
+        private void tbAnio_MouseClick(object sender, MouseEventArgs e)
+        {
+            object d = cbDia.SelectedItem;
+            String dia = cbDia.GetItemText(d);
+            object m = cbMes.SelectedItem;
+            String mes = cbMes.GetItemText(m);
+            if (dia == null)
+            {
+                tbAnio.Enabled = false;
+            }
+            else if(mes == null) { 
+                tbAnio.Enabled = true;
+            }
+            else
+            {
+                tbAnio.Enabled = true;
+            }
+
+        }
+
+        private void cbMes_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbMes_MouseClick(object sender, MouseEventArgs e)
+        {
+            object d = cbDia.SelectedItem;
+            String dia = cbDia.GetItemText(d);
+            if (dia == null)
+            {
+                cbMes.Enabled = false;
+            }
+        }
     }
 }

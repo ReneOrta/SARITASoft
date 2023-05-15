@@ -64,6 +64,7 @@
             this.tbAnio.Name = "tbAnio";
             this.tbAnio.Size = new System.Drawing.Size(365, 49);
             this.tbAnio.TabIndex = 15;
+            this.tbAnio.MouseClick += new System.Windows.Forms.MouseEventHandler(this.tbAnio_MouseClick);
             this.tbAnio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbAnio_KeyPress_1);
             // 
             // label4
@@ -114,7 +115,9 @@
             this.cbMes.Name = "cbMes";
             this.cbMes.Size = new System.Drawing.Size(363, 48);
             this.cbMes.TabIndex = 12;
+            this.cbMes.SelectedIndexChanged += new System.EventHandler(this.cbMes_SelectedIndexChanged);
             this.cbMes.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cbMes_KeyPress);
+            this.cbMes.MouseClick += new System.Windows.Forms.MouseEventHandler(this.cbMes_MouseClick);
             // 
             // label2
             // 
