@@ -60,9 +60,11 @@
             this.tbAnio.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbAnio.Location = new System.Drawing.Point(4, 53);
             this.tbAnio.Margin = new System.Windows.Forms.Padding(4);
+            this.tbAnio.MaxLength = 4;
             this.tbAnio.Name = "tbAnio";
             this.tbAnio.Size = new System.Drawing.Size(365, 49);
             this.tbAnio.TabIndex = 15;
+            this.tbAnio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbAnio_KeyPress_1);
             // 
             // label4
             // 
@@ -108,9 +110,11 @@
             "12"});
             this.cbMes.Location = new System.Drawing.Point(4, 53);
             this.cbMes.Margin = new System.Windows.Forms.Padding(4);
+            this.cbMes.MaxLength = 2;
             this.cbMes.Name = "cbMes";
             this.cbMes.Size = new System.Drawing.Size(363, 48);
             this.cbMes.TabIndex = 12;
+            this.cbMes.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cbMes_KeyPress);
             // 
             // label2
             // 
@@ -165,9 +169,11 @@
             "31"});
             this.cbDia.Location = new System.Drawing.Point(4, 53);
             this.cbDia.Margin = new System.Windows.Forms.Padding(4);
+            this.cbDia.MaxLength = 2;
             this.cbDia.Name = "cbDia";
             this.cbDia.Size = new System.Drawing.Size(363, 48);
             this.cbDia.TabIndex = 10;
+            this.cbDia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cbDia_KeyPress);
             // 
             // button1
             // 

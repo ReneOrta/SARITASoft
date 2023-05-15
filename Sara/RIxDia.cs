@@ -25,7 +25,18 @@ namespace Sara
             Clases.CIngreso ingresos = new Clases.CIngreso();
             ingresos.mostrarIngresosDia(dataGridView1, tbAnio, mes, dia);
         }
-        private void tbAnio_KeyPress(object sender, KeyPressEventArgs e)
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            object d = cbDia.SelectedItem;
+            String dia = cbDia.GetItemText(d);
+            object m = cbMes.SelectedItem;
+            String mes = cbMes.GetItemText(m);
+            Clases.CIngreso ingresos = new Clases.CIngreso();
+            ingresos.mostrarIngresosDia(dataGridView1, tbAnio, mes, dia);
+        }
+
+        private void tbAnio_KeyPress_1(object sender, KeyPressEventArgs e)
         {
             //Para obligar a que sólo se introduzcan números
             if (Char.IsDigit(e.KeyChar))
@@ -44,14 +55,42 @@ namespace Sara
             }
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
+        private void cbMes_KeyPress(object sender, KeyPressEventArgs e)
         {
-            object d = cbDia.SelectedItem;
-            String dia = cbDia.GetItemText(d);
-            object m = cbMes.SelectedItem;
-            String mes = cbMes.GetItemText(m);
-            Clases.CIngreso ingresos = new Clases.CIngreso();
-            ingresos.mostrarIngresosDia(dataGridView1, tbAnio, mes, dia);
+            //Para obligar a que sólo se introduzcan números
+            if (Char.IsDigit(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+              if (Char.IsControl(e.KeyChar)) //permitir teclas de control como retroceso
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                //el resto de teclas pulsadas se desactivan
+                e.Handled = true;
+            }
+        }
+
+        private void cbDia_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //Para obligar a que sólo se introduzcan números
+            if (Char.IsDigit(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+              if (Char.IsControl(e.KeyChar)) //permitir teclas de control como retroceso
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                //el resto de teclas pulsadas se desactivan
+                e.Handled = true;
+            }
         }
     }
 }

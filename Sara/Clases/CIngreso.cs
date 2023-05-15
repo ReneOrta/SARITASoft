@@ -17,7 +17,7 @@ namespace Sara.Clases
             {
                 Conexion conn = new Conexion();// Objeto de conexión a la base de datos
                 tabla_Ing.DataSource = null;//Se incializa la funte de los datos en null
-                String consulta = "select * from ingresos_pedido";
+                String consulta = "select * from pedido";
                 MySqlDataAdapter adapter = new MySqlDataAdapter(consulta, conn.conectar());//Se hace la consulta a la base de datos
                 DataTable dt = new DataTable(); // Objeto de tipo tabla de datos donde se mostrara el contenido de la consulta
                 adapter.Fill(dt);
@@ -39,8 +39,7 @@ namespace Sara.Clases
             {
                 Conexion conn = new Conexion();// Objeto de conexión a la base de datos
                 tabla_Ing.DataSource = null;//Se incializa la funte de los datos en null
-                String consulta = "select ingresos_pedido.id_ip as Id, ingresos_pedido.saldo, ingresos.fecha_consulta as Fecha " +
-                    "from ingresos inner join ingresos_pedido on ingresos.id_ing = ingresos_pedido.ingresos_ip where year (ingresos.fecha_consulta) = " + anio.Text;
+                String consulta = "select id_ped as Id, total as Total, fecha_pedido as Fecha, from pedido where year (fecha_pedido) = " + anio.Text;
                 MySqlDataAdapter adapter = new MySqlDataAdapter(consulta, conn.conectar());//Se hace la consulta a la base de datos
                 DataTable dt = new DataTable(); // Objeto de tipo tabla de datos donde se mostrara el contenido de la consulta
                 adapter.Fill(dt);
@@ -62,8 +61,7 @@ namespace Sara.Clases
             {
                 Conexion conn = new Conexion();// Objeto de conexión a la base de datos
                 tabla_Ing.DataSource = null;//Se incializa la funte de los datos en null
-                String consulta = "select ingresos_pedido.id_ip as Id, ingresos_pedido.saldo, ingresos.fecha_consulta as Fecha " +
-                    "from ingresos inner join ingresos_pedido on ingresos.id_ing = ingresos_pedido.ingresos_ip where month (ingresos.fecha_consulta) = " + mes;
+                String consulta = "select id_ped as Id, total as Total, fecha_pedido as Fecha, from pedido where month (fecha_pedido) = " + mes;
                 MySqlDataAdapter adapter = new MySqlDataAdapter(consulta, conn.conectar());//Se hace la consulta a la base de datos
                 DataTable dt = new DataTable(); // Objeto de tipo tabla de datos donde se mostrara el contenido de la consulta
                 adapter.Fill(dt);
@@ -84,8 +82,7 @@ namespace Sara.Clases
             {
                 Conexion conn = new Conexion();// Objeto de conexión a la base de datos
                 tabla_Ing.DataSource = null;//Se incializa la funte de los datos en null
-                String consulta = "select ingresos_pedido.id_ip as Id, ingresos_pedido.saldo, ingresos.fecha_consulta as Fecha " +
-                    "from ingresos inner join ingresos_pedido on ingresos.id_ing = ingresos_pedido.ingresos_ip where ingresos.fecha_consulta = " + anio.Text + "-" + mes + "-" + dia;
+                String consulta = "select id_ped as Id, total as Total, fecha_pedido as Fecha, from pedido where fecha_pedido = " + anio.Text + "-" + mes + "-" + dia;
                 MySqlDataAdapter adapter = new MySqlDataAdapter(consulta, conn.conectar());//Se hace la consulta a la base de datos
                 DataTable dt = new DataTable(); // Objeto de tipo tabla de datos donde se mostrara el contenido de la consulta
                 adapter.Fill(dt);

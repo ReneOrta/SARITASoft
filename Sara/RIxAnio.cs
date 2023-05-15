@@ -22,7 +22,18 @@ namespace Sara
             ingresos.mostrarIngresosAnio(dataGridView1, tbAnio);
         }
 
-        private void tbAnio_KeyPress(object sender, KeyPressEventArgs e)
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            Clases.CIngreso ingresos = new Clases.CIngreso();
+            ingresos.mostrarIngresosAnio(dataGridView1, tbAnio);
+        }
+
+        private void tbAnio_KeyPress_1(object sender, KeyPressEventArgs e)
         {
             //Para obligar a que sólo se introduzcan números
             if (Char.IsDigit(e.KeyChar))
@@ -39,17 +50,6 @@ namespace Sara
                 //el resto de teclas pulsadas se desactivan
                 e.Handled = true;
             }
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-            Clases.CIngreso ingresos = new Clases.CIngreso();
-            ingresos.mostrarIngresosAnio(dataGridView1, tbAnio);
         }
     }
 }

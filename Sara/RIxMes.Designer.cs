@@ -78,9 +78,11 @@
             "12"});
             this.cbMes.Location = new System.Drawing.Point(4, 57);
             this.cbMes.Margin = new System.Windows.Forms.Padding(4);
+            this.cbMes.MaxLength = 2;
             this.cbMes.Name = "cbMes";
             this.cbMes.Size = new System.Drawing.Size(750, 48);
             this.cbMes.TabIndex = 5;
+            this.cbMes.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cbMes_KeyPress);
             // 
             // label2
             // 
