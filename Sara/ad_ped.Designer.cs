@@ -170,6 +170,7 @@ namespace Sara
             0,
             0,
             0});
+            this.numericUpDown2.ValueChanged += new System.EventHandler(this.numericUpDown2_ValueChanged);
             // 
             // button2
             // 
@@ -219,6 +220,7 @@ namespace Sara
             this.numericUpDown1.Location = new System.Drawing.Point(682, 55);
             this.numericUpDown1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.ReadOnly = true;
             this.numericUpDown1.Size = new System.Drawing.Size(79, 38);
             this.numericUpDown1.TabIndex = 1;
             // 
@@ -426,6 +428,7 @@ namespace Sara
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "ad_ped";
             this.Text = "ad_ped";
+            this.Load += new System.EventHandler(this.ad_ped_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel3.ResumeLayout(false);

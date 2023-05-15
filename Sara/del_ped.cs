@@ -22,5 +22,10 @@ namespace Sara
             Clases.CPedido ped = new Clases.CPedido();
             ped.eliminarPedidos(name_text);
         }
+
+        private void name_text_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
     }
 }

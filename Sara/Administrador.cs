@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+
 
 namespace Sara
 {
@@ -164,6 +166,36 @@ namespace Sara
         private void label1_MouseLeave(object sender, EventArgs e)
         {
             panel1.BackColor = Color.SaddleBrown;
+        }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+            /*string servidor = "localhost";
+            string bd = "sarita";
+            string usuario = "root";
+            string password = "rootsql";
+            string puerto = "3306";
+
+            string cadenaConexion = "server=" + servidor + ";" + "port=" + puerto + ";" + "user id=" + usuario
+               + ";" + "password=" + password + ";" + "database=" + bd + ";";
+
+            string query = "SELECT MAX(id) FROM productos";
+
+            using (SqlConnection connection = new SqlConnection(cadenaConexion))
+            {
+                connection.Open();
+
+                SqlCommand command = new SqlCommand(query, connection);
+                int maxId = (int)command.ExecuteScalar();
+
+                // Actualiza el rango del control NumericupDown
+                numericUpDown1.Minimum = maxId + 1;
+            }*/
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

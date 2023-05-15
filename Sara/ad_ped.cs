@@ -9,6 +9,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
+
 namespace Sara
 {
     public partial class ad_ped : Form
@@ -189,6 +191,36 @@ namespace Sara
                     }
                 }
             }
+        }
+
+        private void numericUpDown2_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ad_ped_Load(object sender, EventArgs e)
+        {
+            string servidor = "localhost";
+           string bd = "sarita";
+           string usuario = "root";
+           string password = "rootsql";
+           string puerto = "3306";
+
+           string cadenaConexion = "server=" + servidor + ";" + "port=" + puerto + ";" + "user id=" + usuario
+              + ";" + "password=" + password + ";" + "database=" + bd + ";";
+
+           string query = "SELECT MAX(id_prod) FROM producto";
+
+           using (MySqlConnection connection = new MySqlConnection(cadenaConexion))
+           {
+               connection.Open();
+
+               MySqlCommand command = new MySqlCommand(query, connection);
+               int maxId = (int)command.ExecuteScalar();
+
+               // Actualiza el rango del control NumericupDown
+               numericUpDown1.Minimum = maxId + 1;
+           }
         }
     }
 }
