@@ -119,6 +119,7 @@ namespace Sara
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "del_ped";
             this.Text = "del_ped";
+            this.Load += new System.EventHandler(this.del_ped_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);

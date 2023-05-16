@@ -145,7 +145,7 @@ namespace Sara
                 string servidor = "localhost";
                 string bd = "sarita";
                 string usuario = "root";
-                string password = "1234";
+                string password = "rootsql";
                 string puerto = "3306";
 
                 string cadenaConexion = "server=" + servidor + ";" + "port=" + puerto + ";" + "user id=" + usuario
@@ -203,13 +203,13 @@ namespace Sara
             string servidor = "localhost";
            string bd = "sarita";
            string usuario = "root";
-           string password = "1234";
+           string password = "rootsql";
            string puerto = "3306";
 
            string cadenaConexion = "server=" + servidor + ";" + "port=" + puerto + ";" + "user id=" + usuario
               + ";" + "password=" + password + ";" + "database=" + bd + ";";
 
-           string query = "SELECT MAX(id_prod) FROM producto";
+           string query = "SELECT MAX(id_ped) FROM pedido";
 
            using (MySqlConnection connection = new MySqlConnection(cadenaConexion))
            {
