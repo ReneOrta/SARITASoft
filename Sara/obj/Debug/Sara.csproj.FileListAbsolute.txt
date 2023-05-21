@@ -417,3 +417,13 @@ C:\Users\Basito\Source\Repos\SARITASoft\Sara\obj\Debug\Sara.csproj.CoreCompileIn
 C:\Users\Basito\Source\Repos\SARITASoft\Sara\obj\Debug\Sara.csproj.CopyComplete
 C:\Users\Basito\Source\Repos\SARITASoft\Sara\obj\Debug\Sara.exe
 C:\Users\Basito\Source\Repos\SARITASoft\Sara\obj\Debug\Sara.pdb
+C:\Users\Usuario\Source\Repos\SARITASoft\Sara\obj\Debug\Sara.Jefe.resources
+C:\Users\Usuario\Source\Repos\SARITASoft\Sara\obj\Debug\Sara.JefeGenerarReporte.resources
+C:\Users\Usuario\Source\Repos\SARITASoft\Sara\obj\Debug\Sara.JefeGenerarReporteIngresos.resources
+C:\Users\Usuario\Source\Repos\SARITASoft\Sara\obj\Debug\Sara.JefeInicio.resources
+C:\Users\Usuario\Source\Repos\SARITASoft\Sara\obj\Debug\Sara.Reportes.resources
+C:\Users\Usuario\Source\Repos\SARITASoft\Sara\obj\Debug\Sara.reporte_pedido.resources
+C:\Users\Usuario\Source\Repos\SARITASoft\Sara\obj\Debug\Sara.reporte_productos.resources
+C:\Users\Usuario\Source\Repos\SARITASoft\Sara\obj\Debug\Sara.RIxAnio.resources
+C:\Users\Usuario\Source\Repos\SARITASoft\Sara\obj\Debug\Sara.RIxDia.resources
+C:\Users\Usuario\Source\Repos\SARITASoft\Sara\obj\Debug\Sara.RIxMes.resources

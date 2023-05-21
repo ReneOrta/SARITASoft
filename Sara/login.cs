@@ -37,7 +37,7 @@ namespace Sara
             else if (Usuario.Text == "Jefe" && textBox1.Text == "ABCD")
             {
                 Jefe jefe = new Jefe();
-                jefe.Show();
+                jefe.Show();            
             }
             else
             {
