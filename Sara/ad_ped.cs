@@ -145,7 +145,7 @@ namespace Sara
                 string servidor = "localhost";
                 string bd = "sarita";
                 string usuario = "root";
-                string password = "1234";
+                string password = "rootsql";
                 string puerto = "3306";
 
                 string cadenaConexion = "server=" + servidor + ";" + "port=" + puerto + ";" + "user id=" + usuario
@@ -203,24 +203,42 @@ namespace Sara
             string servidor = "localhost";
            string bd = "sarita";
            string usuario = "root";
-           string password = "1234";
+           string password = "rootsql";
            string puerto = "3306";
 
            string cadenaConexion = "server=" + servidor + ";" + "port=" + puerto + ";" + "user id=" + usuario
               + ";" + "password=" + password + ";" + "database=" + bd + ";";
 
-           string query = "SELECT MAX(id_ped) FROM pedido";
+           string query = "SELECT count(id_ped) FROM pedido";
+            
 
-           using (MySqlConnection connection = new MySqlConnection(cadenaConexion))
-           {
-               connection.Open();
 
-               MySqlCommand command = new MySqlCommand(query, connection);
-               int maxId = (int)command.ExecuteScalar();
+            using (MySqlConnection connection = new MySqlConnection(cadenaConexion))
+            {
+                connection.Open();
 
-               // Actualiza el rango del control NumericupDown
-               numericUpDown1.Minimum = maxId + 1;
-           }
+                MySqlCommand command = new MySqlCommand(query, connection);
+
+                Console.WriteLine(command.ExecuteScalar().GetType());
+                if ((Int64)command.ExecuteScalar() > 0)
+                {
+                    query = "Select max(id_ped) from pedido";
+                    command = new MySqlCommand(query, connection);
+
+                }
+                else {
+                    return ;
+                }
+                Int64 maxId = (Int64)command.ExecuteScalar();
+
+                // Actualiza el rango del control NumericupDown
+
+                numericUpDown1.Minimum = maxId + 1;
+                    
+            }
+
+
+
         }
     }
 }

@@ -78,18 +78,18 @@ namespace Sara
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 8;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 46.35417F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 53.64583F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 112F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 213F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 98F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 106F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 70F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 21F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1449, 815);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 91F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 173F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 80F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 86F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 57F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 17F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1040, 640);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
             // tableLayoutPanel3
@@ -99,13 +99,13 @@ namespace Sara
             this.tableLayoutPanel3.Controls.Add(this.lbl_nombre, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel4, 0, 1);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 196);
-            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(2, 137);
+            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 2;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 45.28302F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 54.71698F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(1443, 108);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(1036, 87);
             this.tableLayoutPanel3.TabIndex = 8;
             // 
             // lbl_nombre
@@ -114,9 +114,10 @@ namespace Sara
             this.lbl_nombre.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbl_nombre.Font = new System.Drawing.Font("Century Gothic", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_nombre.ForeColor = System.Drawing.Color.White;
-            this.lbl_nombre.Location = new System.Drawing.Point(3, 0);
+            this.lbl_nombre.Location = new System.Drawing.Point(2, 0);
+            this.lbl_nombre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_nombre.Name = "lbl_nombre";
-            this.lbl_nombre.Size = new System.Drawing.Size(1437, 48);
+            this.lbl_nombre.Size = new System.Drawing.Size(1032, 39);
             this.lbl_nombre.TabIndex = 4;
             this.lbl_nombre.Text = "SELECCION DE PRODUCTOS";
             this.lbl_nombre.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -126,17 +127,17 @@ namespace Sara
             this.tableLayoutPanel4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tableLayoutPanel4.ColumnCount = 3;
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 77F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 133F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 58F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.tableLayoutPanel4.Controls.Add(this.comboBox1, 0, 0);
             this.tableLayoutPanel4.Controls.Add(this.numericUpDown2, 1, 0);
             this.tableLayoutPanel4.Controls.Add(this.button2, 2, 0);
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(439, 56);
-            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(306, 45);
+            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(565, 44);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(424, 36);
             this.tableLayoutPanel4.TabIndex = 5;
             // 
             // comboBox1
@@ -144,10 +145,10 @@ namespace Sara
             this.comboBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.comboBox1.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(3, 2);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboBox1.Location = new System.Drawing.Point(2, 2);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(349, 35);
+            this.comboBox1.Size = new System.Drawing.Size(262, 30);
             this.comboBox1.TabIndex = 0;
             // 
             // numericUpDown2
@@ -155,15 +156,15 @@ namespace Sara
             this.numericUpDown2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.numericUpDown2.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown2.InterceptArrowKeys = false;
-            this.numericUpDown2.Location = new System.Drawing.Point(358, 2);
-            this.numericUpDown2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.numericUpDown2.Location = new System.Drawing.Point(268, 2);
+            this.numericUpDown2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.numericUpDown2.Minimum = new decimal(new int[] {
             1,
             0,
             0,
             0});
             this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(71, 36);
+            this.numericUpDown2.Size = new System.Drawing.Size(54, 30);
             this.numericUpDown2.TabIndex = 1;
             this.numericUpDown2.Value = new decimal(new int[] {
             1,
@@ -176,10 +177,10 @@ namespace Sara
             // 
             this.button2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button2.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(435, 5);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button2.Location = new System.Drawing.Point(326, 4);
+            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(127, 34);
+            this.button2.Size = new System.Drawing.Size(95, 28);
             this.button2.TabIndex = 2;
             this.button2.Text = "AÑADIR";
             this.button2.UseVisualStyleBackColor = true;
@@ -192,13 +193,13 @@ namespace Sara
             this.tableLayoutPanel2.Controls.Add(this.ID_label, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.numericUpDown1, 0, 1);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 92);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(2, 65);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 48.83721F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 51.16279F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1443, 100);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1036, 68);
             this.tableLayoutPanel2.TabIndex = 7;
             // 
             // ID_label
@@ -207,9 +208,10 @@ namespace Sara
             this.ID_label.AutoSize = true;
             this.ID_label.Font = new System.Drawing.Font("Century Gothic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ID_label.ForeColor = System.Drawing.Color.White;
-            this.ID_label.Location = new System.Drawing.Point(697, 4);
+            this.ID_label.Location = new System.Drawing.Point(497, 0);
+            this.ID_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.ID_label.Name = "ID_label";
-            this.ID_label.Size = new System.Drawing.Size(49, 39);
+            this.ID_label.Size = new System.Drawing.Size(42, 32);
             this.ID_label.TabIndex = 0;
             this.ID_label.Text = "ID";
             // 
@@ -217,11 +219,11 @@ namespace Sara
             // 
             this.numericUpDown1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.numericUpDown1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown1.Location = new System.Drawing.Point(682, 55);
-            this.numericUpDown1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.numericUpDown1.Location = new System.Drawing.Point(488, 35);
+            this.numericUpDown1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.ReadOnly = true;
-            this.numericUpDown1.Size = new System.Drawing.Size(79, 38);
+            this.numericUpDown1.Size = new System.Drawing.Size(59, 32);
             this.numericUpDown1.TabIndex = 1;
             // 
             // tableLayoutPanel5
@@ -231,13 +233,13 @@ namespace Sara
             this.tableLayoutPanel5.Controls.Add(this.label2, 0, 0);
             this.tableLayoutPanel5.Controls.Add(this.dataGridView1, 0, 1);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 308);
-            this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(2, 228);
+            this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 2;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.77295F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 79.22705F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(1443, 209);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(1036, 169);
             this.tableLayoutPanel5.TabIndex = 9;
             // 
             // label2
@@ -246,9 +248,10 @@ namespace Sara
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(527, 2);
+            this.label2.Location = new System.Drawing.Point(359, 1);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(389, 39);
+            this.label2.Size = new System.Drawing.Size(318, 32);
             this.label2.TabIndex = 1;
             this.label2.Text = "Productos en el pedido";
             // 
@@ -271,8 +274,8 @@ namespace Sara
             this.cant,
             this.price});
             this.dataGridView1.GridColor = System.Drawing.Color.Black;
-            this.dataGridView1.Location = new System.Drawing.Point(315, 51);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dataGridView1.Location = new System.Drawing.Point(213, 41);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
@@ -281,7 +284,7 @@ namespace Sara
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dataGridView1.ShowCellToolTips = false;
-            this.dataGridView1.Size = new System.Drawing.Size(813, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(610, 122);
             this.dataGridView1.TabIndex = 2;
             // 
             // prod
@@ -309,10 +312,10 @@ namespace Sara
             // 
             this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button1.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(650, 731);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button1.Location = new System.Drawing.Point(464, 572);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(148, 53);
+            this.button1.Size = new System.Drawing.Size(111, 43);
             this.button1.TabIndex = 10;
             this.button1.Text = "Enviar";
             this.button1.UseVisualStyleBackColor = true;
@@ -325,13 +328,13 @@ namespace Sara
             this.tableLayoutPanel6.Controls.Add(this.label3, 0, 0);
             this.tableLayoutPanel6.Controls.Add(this.textBox1, 0, 1);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(3, 521);
-            this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(2, 401);
+            this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 2;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 37.5F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 62.5F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(1443, 94);
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(1036, 76);
             this.tableLayoutPanel6.TabIndex = 11;
             // 
             // label3
@@ -340,9 +343,10 @@ namespace Sara
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(673, 0);
+            this.label3.Location = new System.Drawing.Point(481, 1);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(96, 34);
+            this.label3.Size = new System.Drawing.Size(74, 26);
             this.label3.TabIndex = 0;
             this.label3.Text = "TOTAL";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -353,10 +357,10 @@ namespace Sara
             this.textBox1.Enabled = false;
             this.textBox1.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.ForeColor = System.Drawing.Color.Black;
-            this.textBox1.Location = new System.Drawing.Point(605, 42);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox1.Location = new System.Drawing.Point(430, 33);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(232, 44);
+            this.textBox1.Size = new System.Drawing.Size(175, 37);
             this.textBox1.TabIndex = 1;
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -367,13 +371,13 @@ namespace Sara
             this.tableLayoutPanel7.Controls.Add(this.fecha_cad, 0, 1);
             this.tableLayoutPanel7.Controls.Add(this.label4, 0, 0);
             this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel7.Location = new System.Drawing.Point(3, 619);
-            this.tableLayoutPanel7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tableLayoutPanel7.Location = new System.Drawing.Point(2, 481);
+            this.tableLayoutPanel7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel7.Name = "tableLayoutPanel7";
             this.tableLayoutPanel7.RowCount = 2;
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 38.83495F));
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 61.16505F));
-            this.tableLayoutPanel7.Size = new System.Drawing.Size(1443, 102);
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(1036, 82);
             this.tableLayoutPanel7.TabIndex = 12;
             // 
             // fecha_cad
@@ -383,11 +387,11 @@ namespace Sara
             this.fecha_cad.CustomFormat = "yyyy-MM-dd";
             this.fecha_cad.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fecha_cad.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.fecha_cad.Location = new System.Drawing.Point(597, 44);
-            this.fecha_cad.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.fecha_cad.Location = new System.Drawing.Point(424, 34);
+            this.fecha_cad.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.fecha_cad.MinDate = new System.DateTime(2023, 1, 1, 0, 0, 0, 0);
             this.fecha_cad.Name = "fecha_cad";
-            this.fecha_cad.Size = new System.Drawing.Size(248, 53);
+            this.fecha_cad.Size = new System.Drawing.Size(187, 44);
             this.fecha_cad.TabIndex = 8;
             this.fecha_cad.Value = new System.DateTime(2023, 5, 9, 0, 0, 0, 0);
             // 
@@ -397,9 +401,10 @@ namespace Sara
             this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 19.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(3, 0);
+            this.label4.Location = new System.Drawing.Point(2, 0);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(1437, 39);
+            this.label4.Size = new System.Drawing.Size(1032, 31);
             this.label4.TabIndex = 7;
             this.label4.Text = "FECHA DE CADUCIDAD";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -410,22 +415,23 @@ namespace Sara
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Khaki;
-            this.label1.Location = new System.Drawing.Point(3, 0);
+            this.label1.Location = new System.Drawing.Point(2, 0);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1443, 90);
+            this.label1.Size = new System.Drawing.Size(1036, 63);
             this.label1.TabIndex = 5;
             this.label1.Text = "AÑADIR PEDIDO";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // ad_ped
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Peru;
-            this.ClientSize = new System.Drawing.Size(1449, 815);
+            this.ClientSize = new System.Drawing.Size(1040, 640);
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "ad_ped";
             this.Text = "ad_ped";
             this.Load += new System.EventHandler(this.ad_ped_Load);
