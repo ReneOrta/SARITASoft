@@ -94,6 +94,8 @@ namespace Sara
             this.name_text.Name = "name_text";
             this.name_text.Size = new System.Drawing.Size(655, 61);
             this.name_text.TabIndex = 9;
+            this.name_text.TextChanged += new System.EventHandler(this.name_text_TextChanged);
+            this.name_text.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.name_text_KeyPress);
             // 
             // button1
             // 

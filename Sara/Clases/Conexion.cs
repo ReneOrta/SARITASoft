@@ -15,7 +15,7 @@ namespace Sara.Clases
         static string servidor = "localhost";
         static string bd = "sarita";
         static string usuario = "root";
-        static string password = "1234";
+        static string password = "rootsql";
         static string puerto = "3306";
 
         string cadenaConexion = "server=" + servidor + ";" + "port=" + puerto + ";" + "user id=" + usuario

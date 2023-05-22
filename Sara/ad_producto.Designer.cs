@@ -127,6 +127,8 @@ namespace Sara
             this.nom_text.Name = "nom_text";
             this.nom_text.Size = new System.Drawing.Size(655, 49);
             this.nom_text.TabIndex = 5;
+            this.nom_text.TextChanged += new System.EventHandler(this.nom_text_TextChanged);
+            this.nom_text.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.nom_text_KeyPress);
             // 
             // lbl_nombre
             // 
@@ -165,6 +167,8 @@ namespace Sara
             this.precio_text.Name = "precio_text";
             this.precio_text.Size = new System.Drawing.Size(655, 49);
             this.precio_text.TabIndex = 6;
+            this.precio_text.TextChanged += new System.EventHandler(this.precio_text_TextChanged);
+            this.precio_text.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.precio_text_KeyPress);
             // 
             // label3
             // 

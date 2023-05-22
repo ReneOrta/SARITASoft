@@ -120,6 +120,8 @@ namespace Sara
             this.id_text.Name = "id_text";
             this.id_text.Size = new System.Drawing.Size(655, 49);
             this.id_text.TabIndex = 3;
+            this.id_text.TextChanged += new System.EventHandler(this.id_text_TextChanged);
+            this.id_text.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.id_text_KeyPress);
             // 
             // label1
             // 
@@ -171,6 +173,8 @@ namespace Sara
             this.nom_text.Name = "nom_text";
             this.nom_text.Size = new System.Drawing.Size(655, 49);
             this.nom_text.TabIndex = 3;
+            this.nom_text.TextChanged += new System.EventHandler(this.nom_text_TextChanged);
+            this.nom_text.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.nom_text_KeyPress);
             // 
             // tableLayoutPanel3
             // 
@@ -196,6 +200,8 @@ namespace Sara
             this.precio_text.Name = "precio_text";
             this.precio_text.Size = new System.Drawing.Size(655, 49);
             this.precio_text.TabIndex = 4;
+            this.precio_text.TextChanged += new System.EventHandler(this.precio_text_TextChanged);
+            this.precio_text.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.precio_text_KeyPress);
             // 
             // label3
             // 
