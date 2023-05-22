@@ -120,7 +120,7 @@ namespace Sara.Clases
                 Conexion conn = new Conexion();// Objeto de conexión a la base de datos
 
                 //Guardar la consulta para hacer el insert
-                String consulta = "delete from producto where nom_prod='" + nombre.Text + "';";
+                String consulta = "delete from producto where id_prod='" + nombre.Text + "';";
 
                 MySqlCommand comando = new MySqlCommand(consulta, conn.conectar());
 
