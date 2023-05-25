@@ -125,7 +125,7 @@ namespace Sara
             if (dia == null)
             {
                 cbMes.Enabled = false;
-            }
+            }else cbMes.Enabled = true;
         }
     }
 }

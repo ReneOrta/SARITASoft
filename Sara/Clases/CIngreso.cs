@@ -82,7 +82,7 @@ namespace Sara.Clases
             {
                 Conexion conn = new Conexion();// Objeto de conexión a la base de datos
                 tabla_Ing.DataSource = null;//Se incializa la funte de los datos en null
-                String consulta = "select id_ped as Id, total as Total, fecha_pedido as Fecha from pedido where fecha_pedido = " + anio.Text + "-" + mes + "-" + dia;
+                String consulta = "select id_ped as Id, total as Total, fecha_pedido as Fecha from pedido where fecha_pedido = '" + anio.Text + "-" + mes + "-" + dia + "'";
                 MySqlDataAdapter adapter = new MySqlDataAdapter(consulta, conn.conectar());//Se hace la consulta a la base de datos
                 DataTable dt = new DataTable(); // Objeto de tipo tabla de datos donde se mostrara el contenido de la consulta
                 adapter.Fill(dt);
