@@ -537,3 +537,6 @@ C:\Users\Basito\source\repos\SARITASoftt\Sara\obj\Debug\Sara.csproj.CoreCompileI
 C:\Users\Basito\source\repos\SARITASoftt\Sara\obj\Debug\Sara.csproj.CopyComplete
 C:\Users\Basito\source\repos\SARITASoftt\Sara\obj\Debug\Sara.exe
 C:\Users\Basito\source\repos\SARITASoftt\Sara\obj\Debug\Sara.pdb
+C:\Users\Admin\Source\Repos\SARITASoft\Sara\obj\Debug\Sara.Reportes.resources
+C:\Users\Admin\Source\Repos\SARITASoft\Sara\obj\Debug\Sara.reporte_pedido.resources
+C:\Users\Admin\Source\Repos\SARITASoft\Sara\obj\Debug\Sara.reporte_productos.resources

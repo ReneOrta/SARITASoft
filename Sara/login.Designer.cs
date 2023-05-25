@@ -29,6 +29,7 @@ namespace Sara
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(login));
             this.Enviar = new System.Windows.Forms.Button();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -45,10 +46,10 @@ namespace Sara
             // Enviar
             // 
             this.Enviar.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Enviar.Location = new System.Drawing.Point(325, 331);
-            this.Enviar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Enviar.Location = new System.Drawing.Point(244, 269);
+            this.Enviar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Enviar.Name = "Enviar";
-            this.Enviar.Size = new System.Drawing.Size(180, 54);
+            this.Enviar.Size = new System.Drawing.Size(135, 44);
             this.Enviar.TabIndex = 1;
             this.Enviar.Text = "Enviar";
             this.Enviar.UseVisualStyleBackColor = true;
@@ -59,9 +60,10 @@ namespace Sara
             this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox5.BackgroundImage = global::Sara.Properties.Resources.Logo_Harina_1;
             this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox5.Location = new System.Drawing.Point(577, 165);
+            this.pictureBox5.Location = new System.Drawing.Point(433, 134);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(250, 250);
+            this.pictureBox5.Size = new System.Drawing.Size(188, 203);
             this.pictureBox5.TabIndex = 13;
             this.pictureBox5.TabStop = false;
             // 
@@ -72,10 +74,9 @@ namespace Sara
             this.label3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Image = global::Sara.Properties.Resources.eliminarSimbolo;
-            this.label3.Location = new System.Drawing.Point(799, 9);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(599, 7);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(28, 42);
+            this.label3.Size = new System.Drawing.Size(23, 33);
             this.label3.TabIndex = 14;
             this.label3.Text = " ";
             this.label3.Click += new System.EventHandler(this.label3_Click);
@@ -86,19 +87,20 @@ namespace Sara
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.Window;
-            this.label2.Location = new System.Drawing.Point(28, 35);
+            this.label2.Location = new System.Drawing.Point(21, 28);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(145, 56);
+            this.label2.Size = new System.Drawing.Size(114, 44);
             this.label2.TabIndex = 15;
             this.label2.Text = "Login";
             // 
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(39, 343);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox1.Location = new System.Drawing.Point(29, 279);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(223, 36);
+            this.textBox1.Size = new System.Drawing.Size(168, 30);
             this.textBox1.TabIndex = 16;
             this.textBox1.UseSystemPasswordChar = true;
             // 
@@ -108,9 +110,10 @@ namespace Sara
             this.Contrasena.BackColor = System.Drawing.Color.Transparent;
             this.Contrasena.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Contrasena.ForeColor = System.Drawing.SystemColors.Window;
-            this.Contrasena.Location = new System.Drawing.Point(32, 301);
+            this.Contrasena.Location = new System.Drawing.Point(24, 245);
+            this.Contrasena.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Contrasena.Name = "Contrasena";
-            this.Contrasena.Size = new System.Drawing.Size(218, 40);
+            this.Contrasena.Size = new System.Drawing.Size(174, 32);
             this.Contrasena.TabIndex = 19;
             this.Contrasena.Text = "Contraseña:";
             // 
@@ -120,9 +123,10 @@ namespace Sara
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.Window;
-            this.label1.Location = new System.Drawing.Point(31, 195);
+            this.label1.Location = new System.Drawing.Point(23, 158);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(147, 40);
+            this.label1.Size = new System.Drawing.Size(118, 32);
             this.label1.TabIndex = 18;
             this.label1.Text = "Usuario:";
             // 
@@ -130,10 +134,10 @@ namespace Sara
             // 
             this.Usuario.BackColor = System.Drawing.SystemColors.Window;
             this.Usuario.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Usuario.Location = new System.Drawing.Point(39, 237);
-            this.Usuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Usuario.Location = new System.Drawing.Point(29, 193);
+            this.Usuario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Usuario.Name = "Usuario";
-            this.Usuario.Size = new System.Drawing.Size(223, 36);
+            this.Usuario.Size = new System.Drawing.Size(168, 30);
             this.Usuario.TabIndex = 17;
             // 
             // pictureBox2
@@ -141,20 +145,19 @@ namespace Sara
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.BackgroundImage = global::Sara.Properties.Resources.userSimbolo1;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox2.Location = new System.Drawing.Point(43, 95);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox2.Location = new System.Drawing.Point(32, 77);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(107, 96);
+            this.pictureBox2.Size = new System.Drawing.Size(80, 78);
             this.pictureBox2.TabIndex = 21;
             this.pictureBox2.TabStop = false;
             // 
             // login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Sara.Properties.Resources.Fondo_Login;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(839, 413);
+            this.ClientSize = new System.Drawing.Size(629, 336);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.Contrasena);
             this.Controls.Add(this.label1);
@@ -165,6 +168,8 @@ namespace Sara
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.Enviar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
