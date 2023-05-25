@@ -160,7 +160,7 @@ namespace Sara.Clases
             string servidor = "localhost";
             string bd = "sarita";
             string usuario = "root";
-            string password = "rootsql";
+            string password = "1234";
             string puerto = "3306";
 
             string cadenaConexion = "server=" + servidor + ";" + "port=" + puerto + ";" + "user id=" + usuario
@@ -194,7 +194,7 @@ namespace Sara.Clases
             string servidor = "localhost";
             string bd = "sarita";
             string usuario = "root";
-            string password = "rootsql";
+            string password = "1234";
             string puerto = "3306";
 
             string cadenaConexion = "server=" + servidor + ";" + "port=" + puerto + ";" + "user id=" + usuario

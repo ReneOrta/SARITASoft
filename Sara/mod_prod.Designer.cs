@@ -170,6 +170,7 @@ namespace Sara
             this.nom_text.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nom_text.ForeColor = System.Drawing.Color.Black;
             this.nom_text.Location = new System.Drawing.Point(437, 59);
+            this.nom_text.MaxLength = 40;
             this.nom_text.Name = "nom_text";
             this.nom_text.Size = new System.Drawing.Size(655, 49);
             this.nom_text.TabIndex = 3;
@@ -197,6 +198,7 @@ namespace Sara
             this.precio_text.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.precio_text.ForeColor = System.Drawing.Color.Black;
             this.precio_text.Location = new System.Drawing.Point(437, 60);
+            this.precio_text.MaxLength = 3;
             this.precio_text.Name = "precio_text";
             this.precio_text.Size = new System.Drawing.Size(655, 49);
             this.precio_text.TabIndex = 4;

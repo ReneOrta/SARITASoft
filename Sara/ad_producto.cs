@@ -35,7 +35,7 @@ namespace Sara
 
         private void nom_text_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsLetter(e.KeyChar) && e.KeyChar != (char)Keys.Back)
+            if (!char.IsLetter(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar) && e.KeyChar != (char)Keys.Back)
             {
                 e.Handled = true; // Ignorar la tecla presionada
             }
@@ -43,7 +43,7 @@ namespace Sara
 
         private void precio_text_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsDigit(e.KeyChar) && e.KeyChar != (char)Keys.Back)
+            if (!char.IsDigit(e.KeyChar)&&e.KeyChar != (char)Keys.Back)
             {
                 e.Handled = true; // Ignorar la tecla presionada
             }

@@ -124,6 +124,7 @@ namespace Sara
             this.nom_text.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nom_text.ForeColor = System.Drawing.Color.Black;
             this.nom_text.Location = new System.Drawing.Point(440, 69);
+            this.nom_text.MaxLength = 40;
             this.nom_text.Name = "nom_text";
             this.nom_text.Size = new System.Drawing.Size(655, 49);
             this.nom_text.TabIndex = 5;
@@ -164,6 +165,7 @@ namespace Sara
             this.precio_text.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.precio_text.ForeColor = System.Drawing.Color.Black;
             this.precio_text.Location = new System.Drawing.Point(440, 70);
+            this.precio_text.MaxLength = 3;
             this.precio_text.Name = "precio_text";
             this.precio_text.Size = new System.Drawing.Size(655, 49);
             this.precio_text.TabIndex = 6;
@@ -206,10 +208,11 @@ namespace Sara
             this.fecha_cad.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fecha_cad.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.fecha_cad.Location = new System.Drawing.Point(619, 77);
+            this.fecha_cad.MinDate = new System.DateTime(2023, 5, 25, 0, 0, 0, 0);
             this.fecha_cad.Name = "fecha_cad";
             this.fecha_cad.Size = new System.Drawing.Size(297, 53);
             this.fecha_cad.TabIndex = 7;
-            this.fecha_cad.Value = new System.DateTime(2023, 5, 3, 1, 26, 55, 0);
+            this.fecha_cad.Value = new System.DateTime(2023, 5, 25, 0, 0, 0, 0);
             // 
             // label4
             // 

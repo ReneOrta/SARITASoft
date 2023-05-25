@@ -27,7 +27,7 @@ namespace Sara.Clases
 
             catch (Exception ex)
             {
-                MessageBox.Show("No se mostraron los datos de la base de datos, error: " + ex.ToString());
+                MessageBox.Show("No se mostraron los datos de la base de datos, error: ");
 
             }
 
@@ -60,7 +60,7 @@ namespace Sara.Clases
 
             catch (Exception ex)
             {
-                MessageBox.Show("No se guardaron los registros, error: " + ex.ToString());
+                MessageBox.Show("No se guardaron los registros, error: ");
 
             }
 
@@ -110,7 +110,7 @@ namespace Sara.Clases
             }
             catch (Exception ex)
             {
-                MessageBox.Show("No se logro modificar los datos, error: " + ex.ToString());
+                MessageBox.Show("No se logro modificar los datos, error: ");
             }
         }
         public void eliminarProductos(TextBox nombre)
@@ -126,6 +126,8 @@ namespace Sara.Clases
 
                 MySqlDataReader reader = comando.ExecuteReader();
 
+                conn.desconectar();
+
                 MessageBox.Show("Producto eliminado correctamente");
 
                 /*
@@ -133,11 +135,11 @@ namespace Sara.Clases
                 
                 }*/
 
-                conn.desconectar();
+                
             }
             catch (Exception ex)
             {
-                MessageBox.Show("El producto ingresado no existe, error: " + ex.ToString());
+                MessageBox.Show("El producto ingresado no existe,error: ");
             }
         }
     }
