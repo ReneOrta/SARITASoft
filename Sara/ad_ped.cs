@@ -59,33 +59,86 @@ namespace Sara
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Clases.Conexion conecta = new Clases.Conexion();
-            Clases.CPedido con = new Clases.CPedido();
+            
+                Clases.Conexion conecta = new Clases.Conexion();
+                Clases.CPedido con = new Clases.CPedido();
 
-            conecta.conectar();
+                conecta.conectar();
 
-            // Obtener el valor del NumericUpDown
-            decimal cantidad = numericUpDown2.Value;
+                // Obtener el valor del NumericUpDown
+                decimal cantidad = numericUpDown2.Value;
 
-            // Obtener el precio desde la base de datos (aquí debes implementar tu lógica para obtener el precio)
-            decimal precio = con.ObtenerPrecioDesdeBaseDeDatos();
+                // Obtener el precio desde la base de datos (aquí debes implementar tu lógica para obtener el precio)
+                decimal precio = con.ObtenerPrecioDesdeBaseDeDatos();
 
-            // Calcular el costo
-            decimal costo = cantidad * precio;
+                // Calcular el costo
+                decimal costo = cantidad * precio;
 
-            string valorSeleccionado = comboBox1.SelectedItem.ToString();
-            int numeroSeleccionado = (int)numericUpDown2.Value;
+                // Obtener el valor seleccionado del ComboBox
+                string valorSeleccionado = comboBox1.SelectedItem.ToString();
 
-            dataGridView1.Rows.Add(valorSeleccionado, numeroSeleccionado, costo);
+                // Verificar si el producto ya existe en el DataGridView
+                bool productoYaExiste = false;
 
-            decimal total = 0;
-            foreach (DataGridViewRow row in dataGridView1.Rows)
-            {
-                total += Convert.ToDecimal(row.Cells["price"].Value);
+                foreach (DataGridViewRow row in dataGridView1.Rows)
+                {
+                    string productoExistenteEnFila = Convert.ToString(row.Cells["prod"].Value);
+
+                    if (productoExistenteEnFila == valorSeleccionado)
+                    {
+                    productoYaExiste = true;
+                        break;
+                    }
+                }
+
+                if (productoYaExiste)
+                {
+                    MessageBox.Show("El producto ya existe en el DataGridView.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    // Agregar la nueva fila al DataGridView
+                    dataGridView1.Rows.Add(valorSeleccionado, cantidad, costo);
+
+                    decimal total = 0;
+                    foreach (DataGridViewRow row in dataGridView1.Rows)
+                    {
+                        total += Convert.ToDecimal(row.Cells["price"].Value);
+                    }
+
+                    // Mostrar el resultado en el TextBox
+                    textBox1.Text = total.ToString();
+                
             }
 
-            // Mostrar el resultado en el TextBox
-            textBox1.Text = total.ToString();
+            /* Clases.Conexion conecta = new Clases.Conexion();
+             Clases.CPedido con = new Clases.CPedido();
+
+             conecta.conectar();
+
+             // Obtener el valor del NumericUpDown
+             decimal cantidad = numericUpDown2.Value;
+
+             // Obtener el precio desde la base de datos (aquí debes implementar tu lógica para obtener el precio)
+             decimal precio = con.ObtenerPrecioDesdeBaseDeDatos();
+
+             // Calcular el costo
+             decimal costo = cantidad * precio;
+
+             string valorSeleccionado = comboBox1.SelectedItem.ToString();
+             int numeroSeleccionado = (int)numericUpDown2.Value;
+
+             dataGridView1.Rows.Add(valorSeleccionado, numeroSeleccionado, costo);
+
+             decimal total = 0;
+             foreach (DataGridViewRow row in dataGridView1.Rows)
+             {
+                 total += Convert.ToDecimal(row.Cells["price"].Value);
+             }
+
+             // Mostrar el resultado en el TextBox
+             textBox1.Text = total.ToString();*/
+
 
         }
 
@@ -108,9 +161,9 @@ namespace Sara
                     nombres.Add((string)row.Cells["prod"].Value);
                 }
 
-                if (row.Cells["cant"].Value != null)
+                if (row.Cells["cant"].Value != null && int.TryParse(row.Cells["cant"].Value.ToString(), out int cantidad))
                 {
-                    cantidades.Add((int)row.Cells["cant"].Value);
+                    cantidades.Add(cantidad);
                 }
                 if (row.Cells["price"].Value != null)
                 {
@@ -134,6 +187,7 @@ namespace Sara
 
                 }
                 ids.Add(idProducto);
+
             }
 
 
@@ -197,9 +251,42 @@ namespace Sara
         {
 
         }
+        private void CargarProductos()
+        {
+            string servidor = "localhost";
+            string bd = "sarita";
+            string usuario = "root";
+            string password = "rootsql";
+            string puerto = "3306";
 
+            string cadenaConexion = "server=" + servidor + ";" + "port=" + puerto + ";" + "user id=" + usuario
+               + ";" + "password=" + password + ";" + "database=" + bd + ";";
+
+            using (MySqlConnection conexion = new MySqlConnection(cadenaConexion))
+            {
+                string consulta = "SELECT nom_prod , cantidad FROM producto"; // Reemplaza 'Nombre', 'Cantidad' y 'Producto' con tus nombres reales
+
+                using (MySqlCommand comando = new MySqlCommand(consulta, conexion))
+                {
+                    conexion.Open();
+                    MySqlDataReader reader = comando.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        string nombreProducto = reader["nom_prod"].ToString();
+                        int cantidadProducto = Convert.ToInt32(reader["cantidad"]);
+
+                       // comboBox1.Items.Add(nombreProducto); // Agregar el nombre del producto al ComboBox
+                        comboBox1.Tag = cantidadProducto; // Guardar la cantidad en la propiedad Tag del ComboBox
+                    }
+
+                    reader.Close();
+                }
+            }
+        }
         private void ad_ped_Load(object sender, EventArgs e)
         {
+            CargarProductos();
             string servidor = "localhost";
            string bd = "sarita";
            string usuario = "root";
@@ -209,36 +296,39 @@ namespace Sara
            string cadenaConexion = "server=" + servidor + ";" + "port=" + puerto + ";" + "user id=" + usuario
               + ";" + "password=" + password + ";" + "database=" + bd + ";";
 
-           string query = "SELECT count(id_ped) FROM pedido";
-            
-
+            string query = "SELECT MAX(id_ped) FROM pedido";
 
             using (MySqlConnection connection = new MySqlConnection(cadenaConexion))
             {
                 connection.Open();
 
                 MySqlCommand command = new MySqlCommand(query, connection);
-
-                Console.WriteLine(command.ExecuteScalar().GetType());
-                if ((Int64)command.ExecuteScalar() > 0)
-                {
-                    query = "Select max(id_ped) from pedido";
-                    command = new MySqlCommand(query, connection);
-
-                }
-                else {
-                    return ;
-                }
-                Int64 maxId = (Int64)command.ExecuteScalar();
+                int maxId = (int)command.ExecuteScalar();
 
                 // Actualiza el rango del control NumericupDown
-
                 numericUpDown1.Minimum = maxId + 1;
-                    
             }
 
 
 
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int cantidadProducto = (int)comboBox1.Tag; // Obtener la cantidad del producto desde la propiedad Tag del ComboBox
+
+            numericUpDown2.Maximum = cantidadProducto; // Establecer el valor máximo del NumericUpDown
+
+            // Si el valor actual del NumericUpDown es mayor que la nueva cantidad, ajustar el valor
+            if (numericUpDown2.Value > cantidadProducto)
+            {
+                numericUpDown2.Value = cantidadProducto;
+            }
         }
     }
 }
